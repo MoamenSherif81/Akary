@@ -1,6 +1,11 @@
-import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
+import React, { useRef } from 'react'
+import SwiperCards from '../SwiperCards';
 
 export default function About() {
+  const [prevRef, nextRef] = [useRef(null), useRef(null)];
+
   return (
     <>
       <section className='section'>
@@ -35,6 +40,25 @@ export default function About() {
             <p className='mb-3'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sit porro molestias amet. Soluta velit quaerat explicabo est aspernatur vel!</p>
             <p className='mb-3'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sit porro molestias amet. Soluta velit quaerat explicabo est aspernatur vel!</p>
             <p className='mb-3'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius sit porro molestias amet. Soluta velit quaerat explicabo est aspernatur vel!</p>
+          </div>
+        </div>
+      </section>
+      <section className='team section'>
+        <div className='container p-0'>
+          <div className='team__text'>
+            <h2>Meet Our Leadership Team</h2>
+            <p>At Vserve, we believe that Our Success depands on the benfit Out clients Recieve...</p>
+            <div className='team__swiper-buttons'>
+              <button ref={prevRef} className='team__swiper-button'>
+                <FontAwesomeIcon icon={solid("angle-left")} />
+              </button>
+              <button ref={nextRef} className='team__swiper-button'>
+                <FontAwesomeIcon icon={solid("angle-right")} />
+              </button>
+            </div>
+          </div>
+          <div className='team__swiper'>
+            <SwiperCards prevRef={prevRef} nextRef={nextRef}  />
           </div>
         </div>
       </section>
