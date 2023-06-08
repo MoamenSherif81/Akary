@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import Login from './Login'
 
 export default function Navbar() {
+  const [loginActive, setLoginActive] = useState(false);
+  const [login, setLogin] = useState(true)
+
+  // if(loginActive) {
+  //   document.body.style.overflow = 'hidden';
+  // }
+
   return (
     <nav className='bg-white'>
       <div className='container d-flex justify-content-between align-items-center'>
@@ -24,14 +32,23 @@ export default function Navbar() {
         </ul>
         <div className='nav__user mt-1'>
           <div className='nav__login'>
-            <button className='nav__login-button fw-bolder'>Login</button>
-            <button className='nav__login-button fw-bolder'>Register</button>
+            <button className='nav__login-button fw-bolder' 
+                    onClick={() => {setLoginActive(true)
+                                  setLogin(true)}}>
+              Login
+            </button>
+            <button className='nav__login-button fw-bolder'
+                    onClick={() => {setLoginActive(true)
+                                    setLogin(false)}}>
+              Register
+            </button>
           </div>
           <div className='nav__profile'>
             <img className='nav__profile-icon' src='images/profile-user.png' alt='profile-icon' />
           </div>
         </div>
       </div>
+      <Login loginActive={loginActive} setLoginActive={setLoginActive} login={login} setLogin={setLogin} />
     </nav>
   )
 }

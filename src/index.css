@@ -17,8 +17,18 @@ code {
   box-sizing: border-box;
 }
 
+.main-color{
+  color: #d19c58;
+}
+.secondary-color{
+  color: #311a57;
+}
+
 nav{
   border-bottom: rgba(49, 26, 86, .2) 1px solid;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .nav__logo{
@@ -161,6 +171,8 @@ footer{
   display: flex;
 }
 
+
+
 .team__text{
   padding: 20px 30px;
   width: 350px;
@@ -174,8 +186,7 @@ footer{
 .team__swiper{
   background-color: #311b57;
   padding: 25px 35px;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-radius: 0 25px 25px 0;
   width: calc(100% - 350px);
 }
 
@@ -183,14 +194,179 @@ footer{
   height: 100%;
 }
 
-.team__slide{
+.slide{
   background-color: white;
   border-radius: 15px;
-  padding: 25px 30px;
+  padding: 15px;
   text-align: center;
-  max-width: 200px;
 }
 
-.team__slide img{
+.slide img{
   width: 100%;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.slide__title{
+  text-transform: capitalize;
+}
+
+.slide__position{
+  font-size: 18px;
+  color: #d19c58;
+  font-weight: bolder;  
+  text-transform: capitalize;
+}
+
+.slide__social a{
+  font-size: 18px;
+  color: #311b57;
+}
+
+.stats .container{
+  background-color: #d19c58;
+  border-radius: 20px;
+  padding: 50px 100px;
+  width: fit-content;
+}
+.stats__number{
+  font-size: 55px;
+  color: #311a56;
+}
+
+.stats__text{
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.contact__textarea{
+  width: 100%;
+  height: 300px;
+}
+
+.contact__left{
+  flex-grow: 1;
+}
+.contact__right{
+  width: 35%;
+  margin-top: 30px;
+}
+
+input, .contact__textarea{
+  border-radius: 10px;
+  border: 1px solid rgba(0 0 0 / .3);
+  padding: 5px 10px;
+  margin-bottom: 15px;
+}
+
+.contact-form label{
+  color: #d19c58;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+.contact__social img{
+  width: 40px;
+  height: 40px;
+}
+
+.contact__email{
+  color: #d19c58;
+}
+
+.contact__sub-title{
+  color: #311b57;
+  font-size: 18px;
+}
+
+input[type="submit"]{
+  background-color: #d19c58;
+  color: white;
+  border: 0;
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.user-login__cont{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+  background-color: white;
+  z-index: 2;
+  animation-name: popUp;
+  animation-duration: .5s;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  padding: 20px 30px;
+  box-shadow: 0px 0px 10px rgba(0 0 0 /.3);
+}
+
+.user-login__logo{
+  width: 70px;
+}
+
+.login__tab{
+  border: 0;
+  background-color: white;
+  font-size: 18px;
+}
+
+.login__tab.active{
+  border-bottom: 1px solid #d19c58;
+}
+
+.login__methods img{
+  width: 40px;
+}
+
+.login__close{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@keyframes popUp{
+  from{
+    scale: 0 0;
+  }
+  to{
+    scale: 1 1;
+  }
+}
+
+@media (max-width: 1150px) {
+  .contact__right{
+    width: 40%;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px){
+  .team__text{
+    text-align: center;
+    margin: auto;
+  }
+  .team .container{
+    display: block;
+  }
+  .team__swiper{
+    width: 100%;
+    border-radius: 0 0 25px 25px;
+  }
+  .team__swiper-buttons{
+    justify-content: center;
+  }
+  .contact__right{
+    width: 100%;
+    margin-top: 30px;
+  }
 }
