@@ -68,6 +68,7 @@ export default function Login(props) {
           </div>
         </div>
       }
+      {props.loginActive && <div className='overlay' onClick={() => props.setLoginActive(false)}></div>}
     </>
   )
 }
