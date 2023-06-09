@@ -8,6 +8,8 @@ import MainLayout from "./components/layouts/MainLayout";
 import About from "./components/pages/About";
 import Home from "./components/pages/home";
 import Contact from "./components/pages/Contact";
+import UnitPricing from "./components/pages/UnitPricing";
+import CalculationOfFinishing from "./components/pages/CalculationOfFinishing";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
         path: "contact",
         element: <Contact  />,
       },
+      {
+        path: "services/unit-pricing", 
+        element: <UnitPricing />
+      },
+      {
+        path: "services/calculation-of-finishing", 
+        element: <CalculationOfFinishing />
+      }
     ],
   },
 ]);

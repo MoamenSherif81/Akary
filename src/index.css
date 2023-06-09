@@ -23,6 +23,10 @@ code {
 .secondary-color{
   color: #311a57;
 }
+.page{
+  min-height: calc(100vh - 67px);
+  padding-bottom: 15px;
+} 
 
 nav{
   border-bottom: rgba(49, 26, 86, .2) 1px solid;
@@ -283,12 +287,14 @@ input, .contact__textarea{
   font-size: 18px;
 }
 
-input[type="submit"]{
+input[type="submit"], input[type="button"], button[type="button"]{
   background-color: #d19c58;
   color: white;
   border: 0;
   font-size: 22px;
   font-weight: bolder;
+  height: 100%;
+  border-radius: 15px;
 }
 
 .user-login__cont{
@@ -343,6 +349,59 @@ input[type="submit"]{
   background-color: rgba(0 0 0 / .3);
 }
 
+.selling-header__text{
+  width: 50%;
+}
+
+.selling-header__text h1{
+  font-size: 68px;
+  line-height: 52px;
+  color: #311a57;
+}
+
+.selling-header__sub-title{
+  font-size: 50px;
+}
+
+.selling-header__text p{
+  font-size: 20px;
+}
+
+.selling-header__img img{
+  max-width: 400px;
+}
+.selling-header__img{
+  text-align: center;
+  width: 50%;
+}
+
+.selling-form, .price{
+  max-width: 700px;
+  margin: auto;
+}
+
+.price{
+  background-color: rgba(209, 156, 88, .9);
+  border: 1px solid #d19c58;
+  padding: 15px 25px;
+  border-radius: 15px;
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+.divider{
+  width: 100%;
+  height: 1px;
+  background-color: rgb(128, 128, 128);
+  margin-bottom: 20px;
+}
+
+.new-room-cont > *{
+  flex: 1;
+}
+
 @keyframes popUp{
   from{
     scale: 0 0;
@@ -357,7 +416,18 @@ input[type="submit"]{
     width: 40%;
     margin-top: 30px;
   }
+
+  .selling-header__text{
+    width: 100%;
+  }
 }
+
+@media (max-width: 991px){
+  .selling-header__text h1{
+    text-align: center;
+  }
+}
+
 
 @media (max-width: 768px){
   .team__text{
@@ -377,5 +447,11 @@ input[type="submit"]{
   .contact__right{
     width: 100%;
     margin-top: 30px;
+  }
+  .selling-header__text h1{
+    font-size: 50px;
+  }
+  .selling-header__sub-title{
+    font-size: 35px;
   }
 }
