@@ -6,10 +6,6 @@ export default function Navbar() {
   const [loginActive, setLoginActive] = useState(false);
   const [login, setLogin] = useState(true)
 
-  // if(loginActive) {
-  //   document.body.style.overflow = 'hidden';
-  // }
-
   return (
     <nav className='bg-white'>
       <div className='container d-flex justify-content-between align-items-center'>

@@ -398,8 +398,27 @@ input[type="submit"], input[type="button"], button[type="button"]{
   margin-bottom: 20px;
 }
 
+.new-room-cont{
+  align-items: center;
+}
+
 .new-room-cont > *{
   flex: 1;
+}
+
+.room-delete-icon{
+  flex: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.more-details-input{
+  height: 200px;
+  resize: none;
+  border: 1px solid rgba(0 0 0 / .3);
+  border-radius: 10px;
+  padding: 20px;
+  
 }
 
 @keyframes popUp{
@@ -453,5 +472,11 @@ input[type="submit"], input[type="button"], button[type="button"]{
   }
   .selling-header__sub-title{
     font-size: 35px;
+  }
+  .new-rooms input, .new-rooms select{
+    font-size: 12px !important;
+  }
+  input[type="submit"], input[type="button"], button[type="button"]{
+    font-size: 16px;
   }
 }

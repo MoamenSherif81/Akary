@@ -8,12 +8,12 @@ export default function Login(props) {
       { props.loginActive &&
         <div className='user-login__cont rounded-4'>
           <div className='position-relative'>
-            <img className='user-login__logo m-auto mb-3' src='images/logo.png' alt='akary logo' />
+            <img className='user-login__logo m-auto mb-3' src='/images/logo.png' alt='akary logo' />
             <div className='login__tabs mb-3'>
-              <button className={'login__tab ' + (props.login ? 'active' : '')} onClick={() => props.setLogin(true)}>
+              <button className={'login__tab ' + (props.login && 'active')} onClick={() => props.setLogin(true)}>
                 Login
               </button>
-              <button className={'login__tab ' + (props.login ? '' : 'active')} onClick={() => props.setLogin(false)}>
+              <button className={'login__tab ' + (!props.login && 'active')} onClick={() => props.setLogin(false)}>
                 Register
               </button>
             </div>
@@ -22,8 +22,8 @@ export default function Login(props) {
               <div className='login__cont'>
                 <p>Log in to your account</p>
                 <div className='login__methods d-flex gap-3 justify-content-center'>
-                <a href='#'><img src='images/facebook.svg' alt='login with facebook'></img></a>
-                <a href='#'><img src='images/google.svg' alt='login with google'></img></a>
+                  <a href='#'><img src='/images/facebook.svg' alt='login with facebook'></img></a>
+                  <a href='#'><img src='/images/google.svg' alt='login with google'></img></a>
                 </div>
                 <p>Or login with an email</p>
                 <form className='login__form'>
@@ -39,8 +39,8 @@ export default function Login(props) {
               <div className='register__cont'>
                 <p>Create account</p>
                 <div className='login__methods d-flex gap-3 justify-content-center'>
-                <a href='#'><img src='images/facebook.svg' alt='login with facebook'></img></a>
-                <a href='#'><img src='images/google.svg' alt='login with google'></img></a>
+                  <a href='#'><img src='/images/facebook.svg' alt='login with facebook'></img></a>
+                  <a href='#'><img src='/images/google.svg' alt='login with google'></img></a>
                 </div>
                 <p>Or Register with an email</p>
                 <form className='login__form'>
