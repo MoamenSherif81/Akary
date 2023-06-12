@@ -11,14 +11,14 @@ function Home() {
       <section className="section">
         <div className="container">
           <h2 className="section__header mb-4">Services</h2>
-          <div className="services__list d-flex gap-4">
-            <div className="services__item">
+          <div className="services__list row">
+            <div className="services__item col-12 col-sm-4 mb-3">
               <img className="services__img w-100" src="images/home-1622401_640.png" alt="home" />
             </div>
-            <div className="services__item">
+            <div className="services__item col-12 col-sm-4 mb-3">
               <img className="services__img w-100" src="images/kitchen-2400367_640.png" alt="kitchen" />
             </div>
-            <div className="services__item">
+            <div className="services__item col-12 col-sm-4">
               <img className="services__img w-100" src="images/bathroom-1336164_640.png" alt="bathroom" />
             </div>
           </div>
