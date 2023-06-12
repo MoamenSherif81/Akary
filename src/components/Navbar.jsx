@@ -65,7 +65,7 @@ export default function Navbar(props) {
             </button>
           </div>
           <div className='nav__profile'>
-            <img className='nav__profile-icon' src='/images/profile-user.png' alt='profile-icon' />
+            <Link to='/profile'><img className='nav__profile-icon' src='/images/profile-user.png' alt='profile-icon' /></Link>
           </div>
           <span 
             className={'nav__bars'}
