@@ -118,6 +118,7 @@ export default function Profile() {
                   bedrooms='2'
                   bathrooms='1'
                   size='210'
+                  fav={true}
                 />
                 <UnitCard
                   img="/images/asset-2.jpeg"
@@ -128,6 +129,7 @@ export default function Profile() {
                   bedrooms='2'
                   bathrooms='1'
                   size='210'
+                  fav={true}
                 />
                 <UnitCard
                   img="/images/asset-2.jpeg"
@@ -138,6 +140,7 @@ export default function Profile() {
                   bedrooms='2'
                   bathrooms='1'
                   size='210'
+                  fav={true}
                 />
                 <UnitCard
                   img="/images/asset-2.jpeg"
@@ -148,6 +151,7 @@ export default function Profile() {
                   bedrooms='2'
                   bathrooms='1'
                   size='210'
+                  fav={true}
                 />
               </div>
             </div>

@@ -60,6 +60,9 @@ export default function Navbar(props) {
                       props.setLogin(false)}}>
               Register
             </button>
+            <button className='nav__login-button fw-bolder'>
+              Logout
+            </button>
           </div>
           <div className='nav__profile'>
             <img className='nav__profile-icon' src='/images/profile-user.png' alt='profile-icon' />

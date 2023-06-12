@@ -19,8 +19,26 @@ export default function SellUnit() {
         </div>
       </div>
       <h3 className='text-center secondary-color mb-5'>View your unit fill oput the following form</h3>
-      <h5 className="text-center secondary-color">Information about the unit</h5>
       <form className='selling-form d-flex justify-content-center flex-wrap'>
+        <h5 className="text-center secondary-color w-100">Personal Data</h5>
+        <div className="mb-3 w-100 px-1">
+          <label htmlFor="full-name-input" className="form-label main-color">Full Name</label>
+          <input type="text" className="form-control w-100" id="full-name-input" placeholder='Full name' />
+        </div>
+        <div className="mb-3 w-50 px-1">
+          <label htmlFor="phone-input" className="form-label main-color">Phone Number</label>
+          <input type="text" className="form-control w-100" id="phone-input" placeholder='Location' />
+        </div>
+        <div className="mb-3 w-50 px-1">
+          <label htmlFor="other-phone-input" className="form-label main-color">Other Phone Number</label>
+          <input type="text" className="form-control w-100" id="other-phone-input" placeholder='Other Phone Number' />
+        </div>
+        <div className="mb-5 w-100 px-1">
+          <label htmlFor="job-description-input" className="form-label main-color">Job Description</label>
+          <input type="text" className="form-control w-100" id="job-description-input" placeholder='Job Description' />
+        </div>
+
+        <h5 className="text-center secondary-color w-100">Information about the unit</h5>
         <div className="mb-3 w-50 px-1">
           <label htmlFor="unit-conditio-input" className="form-label main-color">Unit Condition</label>
           <select id="unit-conditio-input" className="form-select">

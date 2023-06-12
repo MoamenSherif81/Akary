@@ -1,5 +1,5 @@
 import { faHeart as heartRegular } from '@fortawesome/free-regular-svg-icons'
-import { faBath, faBed, faHouse, faLocationDot, faHeart as heartSolid} from '@fortawesome/free-solid-svg-icons'
+import { faBath, faBed, faHouse, faLocationDot, faUserGroup, faHeart as heartSolid} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -14,8 +14,16 @@ export default function UnitCard(props) {
           <div className='unit-card__header my-2 d-flex justify-content-between'>
             <span className='unit-card__price'>{props.price} L.E.</span>
             <span className='unit-card__favourite'>
-              <FontAwesomeIcon icon={heartSolid} />
-              <FontAwesomeIcon icon={heartRegular} />
+              { !props.fav ?
+                  <>
+                    <FontAwesomeIcon icon={heartSolid} />
+                    <FontAwesomeIcon icon={heartRegular} />
+                  </>
+                :
+                  <>
+                    <FontAwesomeIcon icon={faUserGroup} /> <span>5</span>
+                  </>
+              }
             </span>
           </div>
           <div className='unit-card__description'>{props.desc}</div>

@@ -291,9 +291,9 @@ footer {
   height: 100%;
   width: 100%;
   background-color: rgba(0 0 0 / 0.7);
-  border-radius: 10px;
+  border-radius: 20px;
   opacity: 0;
-  transition: .3s;
+  transition: .3s .3s;
 }
 
 .services__item-text{
@@ -303,15 +303,17 @@ footer {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  transition: .3s .3s;
+  transition: .3s;
 }
 
 .services__item:hover .services__item-overlay{
   opacity: 1;
+  transition: .3s;
 }
 
 .services__item:hover .services__item-text{
   top: 50%;
+  transition: .3s .3s;
 }
 
 .contact__textarea {
