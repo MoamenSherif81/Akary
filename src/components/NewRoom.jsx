@@ -1,7 +1,10 @@
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
 export default function NewRoom(props) {
+  const [room, setRoom] = useState(props.init);
+
   return (
     <div className="w-100 d-flex new-room-cont position-relative" data-id={props.id}>
       <FontAwesomeIcon icon={faTrash} onClick={props.removeRoom} className="room-delete-icon main-color" />
@@ -13,7 +16,8 @@ export default function NewRoom(props) {
           id="room-type-input"
           className="form-select"
           name="type"
-          value={props.init}
+          value={room}
+          onChange={(e) => {setRoom((e.target.value))}}
         >
           <option value="room">Room</option>
           <option value="bathroom">Bathroom</option>
