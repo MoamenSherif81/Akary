@@ -8,6 +8,7 @@ import CalculationOfFinishing from "../pages/CalculationOfFinishing";
 import SellUnit from "../pages/SellUnit";
 import AllUnites from "../pages/AllUnites";
 import SingleUnit from "../pages/SingleUnit";
+import Profile from "../pages/Profile";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: '/unit/*',
         element: <SingleUnit />
+      },
+      {
+        path: '/profile',
+        element: <Profile />
       }
     ],
   },

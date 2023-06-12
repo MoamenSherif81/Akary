@@ -4,9 +4,7 @@ import Login from './Login'
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function Navbar() {
-  const [loginActive, setLoginActive] = useState(false);
-  const [login, setLogin] = useState(true)
+export default function Navbar(props) {
   const [navActive, setNavActive] = useState(false);
   const refNavlist = useRef(null)
   const refBars = useRef(null)
@@ -53,13 +51,13 @@ export default function Navbar() {
         <div className='nav__user mt-1'>
           <div className='nav__login'>
             <button className='nav__login-button fw-bolder' 
-                    onClick={() => {setLoginActive(true)
-                                  setLogin(true)}}>
+                    onClick={() => {props.setLoginActive(true)
+                      props.setLogin(true)}}>
               Login
             </button>
             <button className='nav__login-button fw-bolder'
-                    onClick={() => {setLoginActive(true)
-                                    setLogin(false)}}>
+                    onClick={() => {props.setLoginActive(true)
+                      props.setLogin(false)}}>
               Register
             </button>
           </div>
@@ -75,7 +73,7 @@ export default function Navbar() {
           </span>
         </div>
       </div>
-      <Login loginActive={loginActive} setLoginActive={setLoginActive} login={login} setLogin={setLogin} />
+      <Login loginActive={props.loginActive} setLoginActive={props.setLoginActive} login={props.login} setLogin={props.setLogin} />
     </nav>
   )
 }
