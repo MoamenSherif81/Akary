@@ -35,12 +35,24 @@ export default function UnitPricing() {
           </select>
         </div>
         <div className="mb-3 w-50 px-1">
-          <label htmlFor="space-input" className="form-label main-color">The Space</label>
-          <input type="text" className="form-control" id="space-input" placeholder='Space' />
+          <label htmlFor="finish-ratio-input" className="form-label main-color">Payment Method</label>
+          <select id="finish-ratio-input" class="form-select">
+            <option>Cash</option>
+            <option>Installment</option>
+            <option>Both</option>
+          </select>
+        </div>
+        <div className="mb-3 w-50 px-1">
+          <label htmlFor="area-input" className="form-label main-color">Area</label>
+          <input type="text" className="form-control" id="area-input" placeholder='Area' />
         </div>
         <div className="mb-3 w-50 px-1">
           <label htmlFor="rooms-input" className="form-label main-color">Number of Rooms</label>
           <input type="text" className="form-control" id="rooms-input" placeholder='Number of Rooms' />
+        </div>
+        <div className="mb-3 w-50 px-1">
+          <label htmlFor="bathrooms-input" className="form-label main-color">Number of Bathrooms</label>
+          <input type="text" className="form-control" id="bathrooms-input" placeholder='Number of Bathrooms' />
         </div>
         <div className="mb-3 w-50 px-1">
           <label htmlFor="city-input" className="form-label main-color">City</label>
@@ -49,8 +61,8 @@ export default function UnitPricing() {
           </select>
         </div>
         <div className="mb-3 w-50 px-1">
-          <label htmlFor="role-input" className="form-label main-color">Role</label>
-          <input type="text" className="form-control" id="role-input" placeholder='Role' />
+          <label htmlFor="level-input" className="form-label main-color">Level</label>
+          <input type="text" className="form-control" id="level-input" placeholder='Level' />
         </div>
         <input type='submit' className='w-50' />
       </form>

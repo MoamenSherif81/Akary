@@ -88,13 +88,6 @@ export default function About() {
       twitter: '',
       instagram: '',
       whatsapp: ''
-    },{
-      position: 'Google',
-      image: 'images/googlelogo_color_272x92dp.png',
-      facebook: '',
-      twitter: '',
-      instagram: '',
-      whatsapp: ''
     },
   ]
 
