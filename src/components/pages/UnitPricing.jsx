@@ -1,9 +1,12 @@
 import React from 'react'
+import Breadcrumb from '../Breadcrumb'
 
 export default function UnitPricing() {
+  let path = [{text: 'Home', link: '/'}, {text: 'Pricing'}]
   return (
     <div className='page container'>
-      <div className='section'>
+    <div className='section'>
+      <Breadcrumb path={path} />
         <div className='selling-header d-md-flex align-items-center gap-3'>
           <div className='selling-header__text'>
             <h1 className='fw-bold'>Unit Pricing</h1>

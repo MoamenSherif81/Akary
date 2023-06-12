@@ -5,18 +5,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
-export default function Carousel() {
+export default function Carousel(props) {
+  console.log(props.imgs);
   return (
     <Swiper navigation={true} modules={[Navigation]} loop={true} className="mySwiper">
-      <SwiperSlide>
-        <img className="main-carousel__image" src="images/Scroll Group 1.png" alt="first slide" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img className="main-carousel__image" src="images/Scroll Group 1.png" alt="first slide" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img className="main-carousel__image" src="images/Scroll Group 1.png" alt="first slide" />
-      </SwiperSlide>
+      {props.imgs.map(img => {
+        return <SwiperSlide>
+          <img className="main-carousel__image" src={img} alt="unit" />
+        </SwiperSlide>
+      })}
     </Swiper>
   )
 }

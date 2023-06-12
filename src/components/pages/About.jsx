@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 import React, { useRef } from 'react'
 import SwiperCards from '../SwiperCards';
+import Breadcrumb from '../Breadcrumb';
 
 export default function About() {
   const [prevRefTeam, nextRefTeam ] = [useRef(null), useRef(null)];
@@ -92,7 +93,7 @@ export default function About() {
 
   return (
     <>
-      <section className='section'>
+    <section className='section'>
         <div className='container d-flex align-items-center gap-2'>
           <div className='about-main__text w-50'>
             <h2 className='section__header text-start'>About Us</h2>

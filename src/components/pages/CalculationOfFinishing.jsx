@@ -1,10 +1,13 @@
+import Breadcrumb from "../Breadcrumb";
 import NewRoomsList from "../NewRoomsList";
 
 export default function CalculationOfFinishing() {
+  let path = [{text: 'Home', link: '/'}, {text: 'Finishing Quantity'}]
 
   return (
     <div className='page container'>
       <div className='section'>
+        <Breadcrumb path={path} />
         <div className='selling-header d-md-flex align-items-center gap-3'>
           <div className='selling-header__text'>
             <h1 className='fw-bold'>Calculation of <br /> <span className='selling-header__sub-title'>finishing quantity</span></h1>

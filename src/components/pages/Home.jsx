@@ -1,10 +1,12 @@
 import Carousel from "../Carousel";
 
 function Home() {
+  let imgs = ["/images/Scroll Group 1.png", "/images/Scroll Group 1.png", "/images/Scroll Group 1.png"]
+
   return (
     <div>
       <section className="main-carousel">
-        <Carousel />
+        <Carousel imgs={imgs}/>
       </section>
       <section className="section">
         <div className="container">
@@ -30,17 +32,23 @@ function Home() {
           </p>
         </div>
       </section>
-      <section className="section">
-        <div className="container">
-          <h2 className="section__header mb-4">Contact</h2>
-          <form className="contact__form d-flex flex-row-reverse gap-3">
-            <div className="d-flex flex-column w-50 gap-3">
-              <input type="text" className="contact__input p-2" placeholder="Name" />
-              <input type="text" className="contact__input p-2" placeholder="Phone" />
-              <input type="submit" className="contact__submit" value="Submit" />
-            </div>
-            <textarea className="contact__textarea w-50 p-2" placeholder="Message"></textarea>
-          </form>
+      <section className='section stats'>
+        <div className='container d-flex align-items-center justify-content-center gap-4'>
+          <div className='stats__item text-center'>
+            <h2 className='stats__number'>826</h2>
+            <p className='stats__text'>Meet Our</p>
+            <p className='stats__text'>Leadership team</p>
+          </div>
+          <div className='stats__item text-center'>
+            <h2 className='stats__number'>826</h2>
+            <p className='stats__text'>Meet Our</p>
+            <p className='stats__text'>Leadership team</p>
+          </div>
+          <div className='stats__item text-center'>
+            <h2 className='stats__number'>826</h2>
+            <p className='stats__text'>Meet Our</p>
+            <p className='stats__text'>Leadership team</p>
+          </div>
         </div>
       </section>
     </div>

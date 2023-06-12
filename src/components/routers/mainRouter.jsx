@@ -1,11 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
-import Home from "../pages/home";
+import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import UnitPricing from "../pages/UnitPricing";
 import CalculationOfFinishing from "../pages/CalculationOfFinishing";
 import SellUnit from "../pages/SellUnit";
+import AllUnites from "../pages/AllUnites";
+import SingleUnit from "../pages/SingleUnit";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "contact",
-        element: <Contact  />,
+        element: <Contact />,
       },
       {
         path: "services/unit-pricing", 
@@ -33,8 +35,16 @@ const router = createBrowserRouter([
         element: <CalculationOfFinishing />
       },
       {
-        path: "services/set-unit", 
+        path: "services/sell-unit", 
         element: <SellUnit />
+      },
+      {
+        path: 'services/all-units',
+        element: <AllUnites />
+      },
+      {
+        path: '/unit/*',
+        element: <SingleUnit />
       }
     ],
   },

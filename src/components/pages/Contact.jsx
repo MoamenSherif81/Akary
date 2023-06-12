@@ -1,8 +1,11 @@
 import React from 'react'
+import Breadcrumb from '../Breadcrumb'
 
 export default function Contact() {
+  let path = [{text: 'Home', link: '/'}, {text: 'Contact'}]
   return (
     <div className='container py-5'>
+      <Breadcrumb path={path} />
       <h1 className='text-center'>Contact With AKARY</h1>
       <div className='d-md-flex gap-3'>
         <div className='contact__left'>

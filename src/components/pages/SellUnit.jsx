@@ -1,10 +1,13 @@
+import Breadcrumb from "../Breadcrumb";
 import NewRoomsList from "../NewRoomsList";
 
 export default function SellUnit() {
-
+  let path = [{text: 'Home', link: '/'}, {text: 'Add Unit'}]
+  
   return (
     <div className='page container'>
-      <div className='section'>
+    <div className='section'>
+      <Breadcrumb path={path} />
         <div className='selling-header d-md-flex align-items-center gap-3'>
           <div className='selling-header__text'>
             <h1 className='fw-bold'>Show your unit</h1>
@@ -16,6 +19,7 @@ export default function SellUnit() {
         </div>
       </div>
       <h3 className='text-center secondary-color mb-5'>View your unit fill oput the following form</h3>
+      <h5 className="text-center secondary-color">Information about the unit</h5>
       <form className='selling-form d-flex justify-content-center flex-wrap'>
         <div className="mb-3 w-50 px-1">
           <label htmlFor="unit-conditio-input" className="form-label main-color">Unit Condition</label>
@@ -41,14 +45,15 @@ export default function SellUnit() {
           <label htmlFor="summary-input" className="form-label main-color">Short summary</label>
           <input type="text" className="form-control w-100" id="summary-input" placeholder='Short summary' />
         </div>
+        <div class="mb-3 w-100">
+          <label for="formFile" class="form-label main-color">Upload images</label>
+          <input class="form-control" type="file" id="formFile" multiple="multiple" />
+        </div>
         <div className='divider'></div>
-
+        <h5 className="text-center secondary-color">Add unit parts</h5>
         <NewRoomsList />
-        
         <h5 className="text-center secondary-color">More details</h5>
-
         <textarea className="w-100 mb-3 more-details-input"></textarea>
-
         <div className='mb-3 w-100 px-1'>
           <input type='submit' className='w-100' />
         </div>
